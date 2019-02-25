@@ -1,2 +1,40 @@
 header.header
+    .header__top
+        .container
+            .row
+                .col-24
+                    a.header__logo(href="/")
+                        img(src="/images/logo.png")
+                        img(src="/images/logo-date.png")
+                    
+                    .header__hamburguer
+                        span
+                        span
+                        span
+
+    nav.header__nav
+        
+
+        .container
+            .row
+                .col-24
+                    .header__actions
+                        ul.header__social
+                            each item in site.data.social
+                                li
+                                    a(href=item.url)
+                                        i.fa(class="fa-#{item.name}")
+
+                        ul.header__lang
+                            li.-active
+                                a(href="#") ES
+                            li
+                                a(href="#") EN
+
+                        a.button.header__cta(href="/registro") Registrarme
+                        
+                    ul.header__menu
+                        each item in site.data.header
+                            li
+                                a(href=item.url)= item.name
     

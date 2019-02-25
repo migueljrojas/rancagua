@@ -1,6 +1,34 @@
 [
     {
-        "name":"",
-        "url":""
+        "name":"¿Qué es la Feria Rancagua 2019?",
+        "url":"/que-es-la-feria"
+    },
+    {
+        "name":"Información",
+        "url":"/informacion"
+    },
+    {
+        "name":"Actividades",
+        "url":"/actividades"
+    },
+    {
+        "name":"Expositores",
+        "url":"/expositores"
+    },
+    {
+        "name":"Visitantes",
+        "url":"/visitantes"
+    },
+    {
+        "name":"Noticias",
+        "url":"/noticias"
+    },
+    {
+        "name":"Galería",
+        "url":"/galería"
+    },
+    {
+        "name":"Contacto",
+        "url":"/contacto"
     }
 ]

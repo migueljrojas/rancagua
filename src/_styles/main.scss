@@ -26,6 +26,7 @@ body {
 a {
     color:$link;
     transition: all $duration $easingLight;
+    text-decoration: none;
 
     &:hover{
         color:$linkHover;

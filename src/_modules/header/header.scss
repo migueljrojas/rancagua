@@ -2,6 +2,12 @@
 
     $h: &;
 
+    position: fixed;
+
+    @include mq(md) {
+        position: relative;
+    }
+
     &__hamburguer {
         cursor: pointer;
         width: 25px;
@@ -33,6 +39,95 @@
                 animation-direction:reverse;
             }
         }
+
+        @include mq(md) {
+            display: none;
+        }
+    }
+
+    &__top {
+        border-bottom: 1px solid $lightGray;
+        padding: 10px 0;
+
+        @include mq(md) {
+            padding: 25px 0;
+        }
+    }
+
+    &__logo {
+        display: inline-flex;
+        justify-content: space-between;
+        height: 40px;
+        position: relative;
+
+        @include mq(md) {
+            height: 60px;
+        }
+
+        &:after {
+            position: absolute;
+            right: 40%;
+            width: 1px;
+            top:0;
+            bottom:0;
+            background: $mainColor;
+            content: '';
+        }
+
+        img {
+            width: auto;
+            height: 100%;
+            margin-right: 30px;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+
+        @include mq(md) {
+            position: absolute;
+            right: 0;
+            bottom: calc(100% + 25px);
+            height: 60px;
+        }
+    }
+
+    &__social {
+        margin-right: 40px;
+        display: flex;
+        
+        li {
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+
+        a {
+            color: $mainColor;
+            font-size: 21px;
+        }
+    }
+
+    &__lang {
+        margin-right: 40px;
+        display: flex;
+        
+        li {
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+
+        a {
+            color: $mainColor;
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+
+    &__nav {
+
     }
 
     &.-open {
