@@ -1,1 +1,17 @@
 footer.footer
+    .container
+        .row
+            .col-24
+                .footer__wrapper
+                    a.footer__logo(href="/")
+                        img(src="/images/logo.png")
+                        img(src="/images/logo-date.png")
+
+                    .footer__actions
+                        ul.footer__social
+                            each item in site.data.social
+                                li
+                                    a(href=item.url)
+                                        i.fa(class="fa-#{item.name}")
+
+                        a.button.footer__cta(href="/registro") Registrarme
