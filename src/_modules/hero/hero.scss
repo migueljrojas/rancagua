@@ -1,0 +1,7 @@
+.hero {
+    height: 45vh;
+
+    @include mq(sm) {
+        height: 25vh;
+    }
+}

@@ -62,11 +62,11 @@ $slick-opacity-not-active: 0.25 !default;
 
 .slick-prev,
 .slick-next {
-    display: none!important;
+    //display: none!important;
     position: absolute;
     display: block;
-    height: 30px;
-    width: 30px;
+    height: 65px;
+    width: 60px;
     line-height: 0px;
     font-size: 0px;
     cursor: pointer;
@@ -80,25 +80,46 @@ $slick-opacity-not-active: 0.25 !default;
     border: none;
     outline: none;
     z-index: 10;
+
     &:hover, &:focus {
         outline: none;
-        background: transparent;
-        color: transparent;
+
         &:before {
             opacity: $slick-opacity-on-hover;
         }
     }
-    &.slick-disabled:before {
-        opacity: $slick-opacity-not-active;
+
+    &.slick-disabled {
+        filter: grayscale(100%);
+        opacity: .7;
     }
+
     &:before {
+        content: '';
         font-family: $slick-font-family;
         font-size: 30px;
         line-height: 1;
-        color: $slick-arrow-color;
         opacity: $slick-opacity-default;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        width: 60px;
+        height: 60px;
+        display: block;
+        background: $white;
+        border-radius: 50%;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,.15);
+    }
+
+    &:after {
+        content: '';
+        border-top: 2px solid $orange;
+        border-left: 2px solid $orange;
+        transform: translate3d(-30%, -50%, 0) rotate(-45deg);
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        top: 50%;
+        left: 50%;
     }
 
     @include mq(md) {
@@ -107,30 +128,22 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 .slick-prev {
-    left: 20px;
+    left: -30px;
     [dir="rtl"] & {
         left: auto;
         right: 10px;
     }
-    &:before {
-        content: $slick-prev-character;
-        [dir="rtl"] & {
-            content: $slick-next-character;
-        }
-    }
 }
 
 .slick-next {
-    right: 20px;
+    right: -30px;
     [dir="rtl"] & {
         left: 10px;
         right: auto;
     }
-    &:before {
-        content: $slick-next-character;
-        [dir="rtl"] & {
-            content: $slick-prev-character;
-        }
+
+    &:after {
+        transform: translate3d(-70%, -50%, 0) rotate(135deg);
     }
 }
 

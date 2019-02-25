@@ -1,74 +1,43 @@
-a._button,
-button._button,
-._button {
+a.button,
+button.button,
+.button {
+    @include trans;
+
     background: $link;
     color: $white;
-    display: inline-block;
+    display: inline-flex;
     font-family: $mainFont;
-    font-size: $xs;
-    font-weight: 700;
-    height: $base;
-    line-height: $base;
-    max-width: 300px;
-    padding: 0 40px;
+    font-size: 16px;
+    font-weight: 600;
+    height: 50px;
+    padding: 0 30px;
     text-align: center;
-    transition: all $duration $easingLight;
-    border-radius: $radius;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid $link;
+    text-decoration: none;
 
     &:hover{
         background: $linkHover;
         text-decoration: none;
         color: $white;
+        padding: 0 40px;
+        border: 2px solid $linkHover;
     }
 
-    &.-white {
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    &--white {
         background: $white;
-        color: $black;
+        color: $link;
 
         &:hover{
-            color: $mainColor;
-            background: $white;
-            padding: 0 40px;
+            color: $link;
+            background: darken($white, 5%);
         }
     }
-
-    &.-cta{
-        color:$white;
-        padding: 0 25px;
-        height: 70px;
-        letter-spacing: 1px;
-        line-height: 70px;
-        font-family: $mainFont;
-
-        &:hover{
-            background: $mainColor;
-            padding: 0 40px;
-        }
-    }
-
-    &.-large {
-        height: $base*1.5;
-        line-height: $base*1.5;
-        font-size: 24px;
-    }
-
-    &.-small {
-        height: $base*0.75;
-        line-height: $base*0.75;
-    }
-
-    &.-black {
-        color:$white;
-        background: $black;
-
-        &:hover{
-            color: $mainColor;
-            background: $black;
-            padding: 0 60px;
-        }
-    }
-}
-
-button._button{
-    border: none;
 }

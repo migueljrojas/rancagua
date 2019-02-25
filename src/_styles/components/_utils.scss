@@ -59,3 +59,114 @@
 [data-parallax]{
     position: relative;
 }
+
+.border {
+    border: 1px solid $lightGray;
+    border-radius: 5px;
+}
+
+._divider {
+    height: 1px;
+    width: 100%;
+    background: $lightGray;
+    margin: 20px 0;
+}
+
+.polygon-bg {
+    background: url('/images/polygon-back.jpg') no-repeat center center / cover;
+}
+
+.gray-bg {
+    background: $lightestGray;
+}
+
+.ripped-border {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    margin-top: -5%;
+    margin-bottom: -5%;
+    position: relative;
+    z-index: 2;
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 100%;
+        left: 0;
+        right:0;
+        height: 0;
+        padding-bottom: 10%;
+    }
+
+    &:before {
+        top: 0;
+        background: url('/images/ripped-border-top.png') no-repeat center center / cover;
+    }
+
+    &:after {
+        bottom: 0;
+        background: url('/images/ripped-border-bottom.png') no-repeat center center / cover;
+    }
+
+    &--gray {
+        &:before {
+            background: url('/images/ripped-border-gray-top.png') no-repeat center center / cover;
+        }
+
+        &:after {
+            background: url('/images/ripped-border-gray-bottom.png') no-repeat center center / cover;
+        }
+    }
+
+    &--top {
+        padding-bottom: 0;
+        margin-bottom: 0;
+
+        &:after {
+            display: none;
+        }
+    }
+
+    &--bottom {
+        padding-top: 0;
+        margin-top: 0;
+        
+        &:before {
+            display: none;
+        }
+    }
+}
+
+.section-title {
+    font-size: 36px;
+    margin: 0 0 20px;
+    padding-bottom: 12px;
+    background: url('/images/underline-blue.png') no-repeat center bottom / contain;
+    color: $mainColor;
+    text-transform: uppercase;
+
+    @include mq(md) {
+        font-size: 52px;
+        margin: 0 0 40px;
+        padding-bottom: 15px;
+    }
+
+    &--white {
+        background: url('/images/underline-white.png') no-repeat center bottom / contain;
+        color: $white;
+    }
+
+    &--left {
+        text-align: left;
+        background-position: left bottom;
+    }
+}
+
+.main-text {
+    color: $darkGray;
+    margin: 0 0 10px;
+    font-size: 16px;
+    line-height: 1.5;
+}
