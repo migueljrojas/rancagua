@@ -1,14 +1,9 @@
 .home {
     &__hero {
-        &__row {
-            &--top {
-                @include mq(sm) {
-                    display: flex;
-                }
-            }
-
-            &--bottom {
-                background: $white;
+        &__wrapper {
+            @include mq(sm) {
+                display: flex;
+                width: 100%;
             }
         }
 
@@ -16,7 +11,7 @@
             width: 90%;
             margin-left: auto;
             margin-right: auto;
-            overflow: hidden;
+            // overflow: hidden;
 
             &--left {
                 position: relative;

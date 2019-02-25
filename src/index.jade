@@ -1,9 +1,11 @@
 extends _layouts/base
 
+include ./_modules/article/article
+
 block content
     main.home
-        .home__hero
-            .home__hero__row.home__hero__row--top.polygon-bg
+        section.home__hero.polygon-bg
+            .home__hero__wrapper
                 .home__hero__column.home__hero__column--left
                     img(src="/images/home-hero.png")
                 .home__hero__column.home__hero__column--right
@@ -13,14 +15,113 @@ block content
                         h2.home__hero__title Una feria de oportunidades y capacidades del 2 al 4 de Mayo
                         p.home__hero__text Lo invitamos a participar de charlas, exposiciones, intervenciones artísticas, shows musicales, zonas gastronómicas y más...
                         a.button.button--white.home__hero__button(href="#") registrarme
-            .home__hero__row.home__hero__row--bottom.ripped-border.ripped-border--top
-                .container
+                        
+        section.home__oportunidad.ripped-border
+            .container
+                .hero__oportunidad__row
                     .row
                         .col-24.col-sm-8
-                            .home__hero__group
+                            .home__oportunidad__group
                                 i.fa.fa-calendar
-                                h3.home__hero__title Fecha
-                            span.home__hero__dates 02 - 03 - 04 de Mayo 
+                                h3.home__oportunidad__title Fecha
+                            p.home__oportunidad__text 02 - 03 - 04 de Mayo 
                         .col-24.col-sm-8
+                            .home__oportunidad__group
+                                i.fa.fa-map-marker
+                                h3.home__oportunidad__title Lugar
+                            p.home__oportunidad__text 02 - 03 - 04 de Mayo 
+                            p.home__oportunidad__text 02 - 03 - 04 de Mayo 
                         .col-24.col-sm-8
-                
+                            .home__oportunidad__group
+                                a.button.home__oportunidad__button quiero exponer
+                                a.button.button--white.home__oportunidad__button quiero auspiciar
+            
+            .hero__oportunidad__row
+                .hero__oportunidad__column
+                    img(src="/images/home-oportunidad.png")
+                .hero__oportunidad__column
+                    .hero__oportunidad__wrapper
+                        h2.hero__oportunidad__title.section-title Una gran oportunidad
+                        p.hero__oportunidad__wrapper-text Tiene por objetivo mostrar todas las oportunidades y capacidades que ogrece la ciudad de Rancagua a sus habitantes y el mundo.
+                        p.hero__oportunidad__wrapper-text Durante tres días de feria, se realizarán diversas actividades de tipo cultural y empresarial: charlas, exposiciones, intervenciones artisticas, shows musicales, zonas gastronomicas y más.
+                        p.hero__oportunidad__wrapper-text Invitamos a todos los sectores productivos, de servicios y al público en general, a ser protagonistas de esta feria.
+                            
+        section.home__quien-participa.polygon-bg
+            .container
+                .row
+                    .col-24.col-sm-8.offset-sm-8
+                        h2.home__quien-participa__title.section-title.section-title--white ¿Quién participa?
+                .row
+                    .col-24
+                        .home__quien-participa__image
+                            img(src="/images/map.png")
+        
+        section.home__actividades.ripped-border.ripped-border--gray
+            .container
+                .row
+                    .col-24
+                        h2.home__actividades__title.section-title actividades
+                        p.home__actividades__text Revisa aquí todas las actividades de la Feria Rancagua 2019
+                .row
+                    each article in site.data.activities
+                        .col-24.col-sm-8
+                            +article(article)
+                    a.home__actividades__button.button(href="#") ver más
+
+        section.home__momentos
+            .container
+                .row
+                    .col-24
+                        h2.home__momentos__title.section-title Momentos de feria
+                        a
+                            i.fa.fa-instagram
+                        p.home__momentos___text Aquí podras encontrar carrusel de fotos de instagram con el hashtag #feriarancagua2019
+                .row
+                    .col-12.col-sm-6
+                        .home__momentos__image
+                            img(src="/images/insta-1.jpg")
+                    .col-12.col-sm-6
+                        .home__momentos__image
+                            img(src="/images/insta-1.jpg")
+                    .col-12.col-sm-6
+                        .home__momentos__image
+                            img(src="/images/insta-3.jpg")
+                    .col-12.col-sm-6
+                        .home__momentos__image
+                            img(src="/images/insta-4.jpg")
+                    .col-12.col-sm-6
+                        .home__momentos__image
+                            img(src="/images/insta-5.jpg")
+                    .col-12.col-sm-6
+                        .home__momentos__image
+                            img(src="/images/insta-6.jpg")
+                    .col-12.col-sm-6
+                        .home__momentos__image
+                            img(src="/images/insta-7.jpg")
+                    .col-12.col-sm-6
+                        .home__momentos__image
+                            img(src="/images/insta-8.jpg")
+                .row
+                    .col-24.col-sm-4.offset-sm-6
+                        .home__momentos__group
+                            i.fa.fa-instagram
+                            a.home__momentos__link(href="#") @feriarancagua
+                    .col-24.col-sm-4
+                        .home__momentos__group
+                            i.fa.fa-facebook
+                            a.home__momentos__link(href="#") /Feriarancagua
+                    .col-24.col-sm-4
+                        .home__momentos__group
+                            i.fa.fa-twitter
+                            a.home__momentos__link(href="#") @feriarancagua
+        
+        section.home__noticias.polygon-bg.ripped-border
+            .container
+                .row
+                    .col-24
+                        h2.home__noticias__title.section-title.section-title--white noticias
+                .row
+                    each article in site.data.news
+                        .col-24.col-sm-8
+                            +article(article)
+                    a.home__actividades__button.button.button--white(href="#") ver más
