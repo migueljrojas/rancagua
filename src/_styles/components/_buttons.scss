@@ -36,10 +36,22 @@ button.button,
     &--white {
         background: $white;
         color: $link;
+        border: 2px solid $white;
 
         &:hover{
-            color: $link;
+            color: $linkHover;
             background: darken($white, 5%);
+            border: 2px solid darken($white, 5%);
+        }
+    }
+
+    &--ghost {
+        background: $white;
+        color: $link;
+
+        &:hover{
+            background: darken($white, 5%);
+            color: $linkHover;
         }
     }
 }
