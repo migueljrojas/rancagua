@@ -2,3 +2,25 @@ extends _layouts/base
 
 block content
     main.home
+        .home__hero
+            .home__hero__row.home__hero__row--top.polygon-bg
+                .home__hero__column.home__hero__column--left
+                    img(src="/images/home-hero.png")
+                .home__hero__column.home__hero__column--right
+                    .home__hero__container
+                        .home__hero__logo
+                            img(src="/images/logo-white.png")
+                        h2.home__hero__title Una feria de oportunidades y capacidades del 2 al 4 de Mayo
+                        p.home__hero__text Lo invitamos a participar de charlas, exposiciones, intervenciones artísticas, shows musicales, zonas gastronómicas y más...
+                        a.button.button--white.home__hero__button(href="#") registrarme
+            .home__hero__row.home__hero__row--bottom.ripped-border.ripped-border--top
+                .container
+                    .row
+                        .col-24.col-sm-8
+                            .home__hero__group
+                                i.fa.fa-calendar
+                                h3.home__hero__title Fecha
+                            span.home__hero__dates 02 - 03 - 04 de Mayo 
+                        .col-24.col-sm-8
+                        .col-24.col-sm-8
+                

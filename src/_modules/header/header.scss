@@ -4,7 +4,7 @@
     font-weight: 600;
     letter-spacing: 0.5px;
     position: relative;
-    text-transform: uppercase;    
+    text-transform: uppercase;
 }
 
 @mixin headerUnderline {
@@ -22,7 +22,7 @@
     }
 
     &:hover {
-        color: $mainColor; 
+        color: $mainColor;
 
         &::after {
             right:0;
@@ -123,6 +123,7 @@
     &__actions {
         display: flex;
         align-items: center;
+        justify-content: space-between;
 
         @include mq(md) {
             position: absolute;
@@ -133,9 +134,12 @@
     }
 
     &__social {
-        margin-right: 40px;
         display: flex;
-        
+
+        @include mq(sm) {
+            margin-right: 40px;
+        }
+
         li {
             &:not(:last-child) {
                 margin-right: 10px;
@@ -149,9 +153,12 @@
     }
 
     &__lang {
-        margin-right: 40px;
         display: flex;
-        
+
+        @include mq(sm) {
+            margin-right: 40px;
+        }
+
         li {
             &:not(:last-child) {
                 margin-right: 10px;
@@ -160,7 +167,7 @@
             &.-active {
                 a {
                     color: $mainColor;
-                    
+
                     @include headerUnderline;
 
                     &:after {
@@ -169,7 +176,7 @@
                 }
             }
         }
-        
+
         a {
             @include headerLink;
             display: block;
@@ -225,17 +232,17 @@
                     }
                 }
             }
-            
+
             a {
                 @include headerLink();
                 @include headerUnderline();
-                
+
                 position: relative;
                 display: block;
                 height: 50px;
                 line-height: 50px;
                 border-bottom: 1px dotted $lightGray;
-                
+
                 @include mq(md) {
                     border-bottom: none;
                 }
