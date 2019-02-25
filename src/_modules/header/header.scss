@@ -35,6 +35,9 @@
     $h: &;
 
     position: fixed;
+    background: $white;
+    width: 100%;
+    z-index: 10000;
 
     @include mq(md) {
         position: relative;
@@ -46,8 +49,8 @@
         height: 25px;
         margin: auto;
         position: absolute;
-        right: 32px;
-        top: 30px;
+        right: 15px;
+        top: 12px;
 
         span {
             background-color: $mainColor;
@@ -171,33 +174,66 @@
     }
 
     &__nav {
+        @include trans;
 
+        position: fixed;
+        top: 60px;
+        left:0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        transform: translateX(-100%);
+        background: $white;
+        padding: 20px 0;
+        border-top: 1px solid $lightGray;
+
+        @include mq(md) {
+            position: static;
+            border-top: none;
+            padding: 0;
+            transform: translateX(0);
+        }
     }
 
     &__menu {
+        padding-top: 20px;
+        margin-top: 20px;
+        border-top: 1px solid $lightGray;
+
         @include mq(md) {
             display: flex;
             width: 100%;
             justify-content: space-around;
+            padding-top: 0;
+            margin-top: 0;
+            border-top: none;
         }
 
         li {
 
             &.-active {
                 a {
-                    @include headerUnderline();
+                    color: $mainColor;
+                    pointer-events: none;
+
+                    &:after {
+                        right: 0;
+                    }
                 }
             }
             
             a {
                 @include headerLink();
                 @include headerUnderline();
-
+                
+                position: relative;
+                display: block;
+                height: 50px;
+                line-height: 50px;
+                border-bottom: 1px dotted $lightGray;
+                
                 @include mq(md) {
-                    height: 50px;
-                    line-height: 50px;
-                    position: relative;
-                    display: block;
+                    border-bottom: none;
                 }
             }
         }
@@ -217,7 +253,7 @@
         }
 
         #{$h}__nav {
-
+            transform: translateX(0)
         }
     }
 }
