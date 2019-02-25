@@ -267,6 +267,14 @@
             transform: translateX(0)
         }
     }
+
+    & + main {
+        padding-top: 60px;
+
+        @include mq(md) {
+            padding-top: 0;
+        }
+    }
 }
 
 //hamburguer animations

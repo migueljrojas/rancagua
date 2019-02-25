@@ -2,4 +2,12 @@
     &__wrapper {
         padding-bottom: 8%;
     }
+
+    &__body {
+        background: $lightestGray;
+
+        @include mq(md) {
+            background: none;
+        }
+    }
 }

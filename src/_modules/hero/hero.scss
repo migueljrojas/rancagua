@@ -6,7 +6,7 @@
     justify-content: center;
 
     @include mq(sm) {
-        height: 35vh;
+        height: 40vh;
     }
 
     &__title {
@@ -15,9 +15,11 @@
         text-transform: uppercase;
         margin: 0;
         line-height: 1;
+        transform: translateY(-50%);
 
         @include mq(md) {
             font-size: 64px;
+            transform: translateY(-30%);
         }
     }
 }
