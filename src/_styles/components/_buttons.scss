@@ -10,7 +10,7 @@ button.button,
     font-size: 14px;
     font-weight: 600;
     height: 50px;
-    padding: 0 30px;
+    padding: 0 20px;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -24,7 +24,7 @@ button.button,
         background: $linkHover;
         text-decoration: none;
         color: $white;
-        padding: 0 40px;
+        padding: 0 30px;
         border: 2px solid $linkHover;
     }
 
@@ -53,5 +53,9 @@ button.button,
             background: darken($white, 5%);
             color: $linkHover;
         }
+    }
+
+    i {
+        margin-right: 10px;
     }
 }

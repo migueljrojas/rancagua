@@ -1,1 +1,39 @@
-// article styles
+.article {
+    background: $white;
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 40px;
+
+    &__image {
+        border-radius: 10px 10px 0 0;
+        position: relative;
+        overflow: hidden;
+        height: 0;
+        padding-bottom: 60%;
+
+        img {
+            width: 100%;
+            height: auto;
+            min-height: 100%;
+            position: absolute;
+            top:50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__data {
+        padding: 20px 15px;
+    }
+
+    &__title {
+        color: $mainColor;
+        font-size: 21px;
+        margin: 0 0 15px;
+    }
+
+    &__text {
+        color: $darkGray;
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+}

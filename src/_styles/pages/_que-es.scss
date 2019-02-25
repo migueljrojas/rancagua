@@ -1,0 +1,53 @@
+.about {
+
+    &__hero {
+        padding: 40px 0;
+        background: url('/images/que-es-hero.jpg') no-repeat center center / cover;
+        text-align: center;
+        color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include mq(md) {
+            height: 70vh;
+        }
+
+        &__title {
+            color: $white;
+            font-size: 36px;
+            text-transform: uppercase;
+            margin: 0 0 20px;
+            line-height: 1;
+    
+            @include mq(md) {
+                font-size: 64px;
+                margin: 0 0 40px;
+            }
+        }
+
+        &__summary {
+            line-height: 1.8;
+            font-size: 14px;
+        }
+    }
+
+    &__blueprint {
+        padding-bottom: 8%;
+
+        &__heading {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        &__plans {
+            text-align: center;
+        }
+
+        &__image {
+            max-width: 100%;
+            display: inline-block;
+            margin-bottom: 40px;
+        }
+    }
+}

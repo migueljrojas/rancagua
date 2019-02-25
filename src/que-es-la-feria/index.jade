@@ -5,4 +5,25 @@ block config
   - var baseUrl = '../'
 
 block content
-  p que-es-la-feria page
+    main.about
+        .about__hero
+            .container
+                .row
+                    .col-24.col-sm-18.col-md-16.offset-sm-3.offset-md-4
+                        .about__hero__content
+                            h1.about__hero__title ¿Qué es la feria rancagua 2019?
+                            p.about__hero__summary Feria Rancagua 2019, tiene por objetivo mostrar todas las oportunidades y capacidades que ofrece la ciudad de Rancagua a sus habitantes y al mundo. Durante tres días de feria, se realizarán diversas actividades de tipo cultural y empresarial: charlas, exposiciones, intervenciones artísticas, shows musicales, zonas gastronómicas y más. Invitamos a todos los sectores productivos, de servicios y al público general, a ser protagonistas de esta feria.
+        
+        .about__blueprint.ripped-border.ripped-border--top
+            .container
+                .row
+                    .col-24
+                        .about__blueprint__heading
+                            h2.about__blueprint__title.section-title Plano de la feria
+                            p.main-text.main-text--large A continuación podrás descargar el <strong>MAPA FERIAL</strong> de la feria
+                        .about__blueprint__plans
+                            img.about__blueprint__image(src="/images/plano-feria.png")
+                            a.button(href="#")
+                                i.fa.fa-download
+                                | Descargar el plano de la feria
+

@@ -101,22 +101,22 @@
     }
 
     &:before {
-        top: 0;
-        background: url('/images/ripped-border-top.png') no-repeat center center / cover;
+        top: -2%;
+        background: url('/images/ripped-border-top.png') no-repeat center top / cover;
     }
 
     &:after {
-        bottom: 0;
-        background: url('/images/ripped-border-bottom.png') no-repeat center center / cover;
+        bottom: -2%;
+        background: url('/images/ripped-border-bottom.png') no-repeat center bottom / cover;
     }
 
     &--gray {
         &:before {
-            background: url('/images/ripped-border-gray-top.png') no-repeat center center / cover;
+            background: url('/images/ripped-border-gray-top.png') no-repeat center top / cover;
         }
 
         &:after {
-            background: url('/images/ripped-border-gray-bottom.png') no-repeat center center / cover;
+            background: url('/images/ripped-border-gray-bottom.png') no-repeat center bottom / cover;
         }
     }
 
@@ -142,19 +142,21 @@
 .section-title {
     font-size: 36px;
     margin: 0 0 20px;
-    padding-bottom: 12px;
-    background: url('/images/underline-blue.png') no-repeat center bottom / contain;
+    padding-bottom: 15px;
+    background: url('/images/underline-blue.png') no-repeat center bottom;
     color: $mainColor;
     text-transform: uppercase;
+    display: block;
+    text-align: center;
 
     @include mq(md) {
         font-size: 52px;
         margin: 0 0 40px;
-        padding-bottom: 15px;
+        padding-bottom: 30px;
     }
 
     &--white {
-        background: url('/images/underline-white.png') no-repeat center bottom / contain;
+        background: url('/images/underline-white.png') no-repeat center bottom;
         color: $white;
     }
 
@@ -169,4 +171,12 @@
     margin: 0 0 10px;
     font-size: 16px;
     line-height: 1.5;
+
+    &--large {
+        font-size: 1.2em;
+
+        @include mq(md) {
+            font-size: 1.5em;
+        }
+    }
 }
