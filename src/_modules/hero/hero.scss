@@ -1,7 +1,23 @@
 .hero {
     height: 45vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 
     @include mq(sm) {
-        height: 25vh;
+        height: 35vh;
+    }
+
+    &__title {
+        color: $white;
+        font-size: 42px;
+        text-transform: uppercase;
+        margin: 0;
+        line-height: 1;
+
+        @include mq(md) {
+            font-size: 64px;
+        }
     }
 }
