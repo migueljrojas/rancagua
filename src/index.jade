@@ -35,11 +35,24 @@ block content
                                 p.home__oportunidad__text.home__oportunidad__text--blue Medialuna Monumental de Rancagua 
                                 p.home__oportunidad__text Avenida España con German Ibarra, Rancagua
                                 p.home__oportunidad__text Región del Libertador Gral. Bernardo O'Higgins
-                        .col-24.col-sm-8.text-right                        
-                            a.button.home__oportunidad__button(href="#") quiero exponer
-                            br
-                            br
-                            a.button.button--ghost.home__oportunidad__button(href="#") quiero auspiciar
+                        .col-24.col-sm-8.home__oportunidad__container
+                            .home__oportunidad__wrapper
+                                .home__oportunidad__group
+                                    i.fa.fa-clock-o
+                                    h3.home__oportunidad__title Sólo falta
+                                ul.registro__oportunidad__list
+                                    li.registro__oportunidad__list-item
+                                        span.registro__oportunidad__number 89
+                                        p.registro__oportunidad__subtext días
+                                    li.registro__oportunidad__list-item
+                                        span.registro__oportunidad__number 6
+                                        p.registro__oportunidad__subtext horas
+                                    li.registro__oportunidad__list-item
+                                        span.registro__oportunidad__number 18
+                                        p.registro__oportunidad__subtext minutos
+                                    li.registro__oportunidad__list-item
+                                        span.registro__oportunidad__number 57
+                                        p.registro__oportunidad__subtext segundos
             
             .home__oportunidad__row
                 .container
@@ -50,7 +63,7 @@ block content
                         .col-24.col-sm-12
                             .home__oportunidad__column
                                 .home__oportunidad__column-wrapper
-                                    h2.home__oportunidad__title.section-title.section-title--left Una gran oportunidad
+                                    h2.home__oportunidad__title.section-title.section-title--left feria internacional rancagua 2019
                                     .home__oportunidad__wrapper-group
                                         p.home__oportunidad__wrapper-text Tiene por objetivo mostrar todas las oportunidades y capacidades que ogrece la ciudad de Rancagua a sus habitantes y el mundo.
                                         p.home__oportunidad__wrapper-text Durante tres días de feria, se realizarán diversas actividades de tipo cultural y empresarial: charlas, exposiciones, intervenciones artisticas, shows musicales, zonas gastronomicas y más.
@@ -66,19 +79,8 @@ block content
                         .home__quien-participa__image
                             img(src="/images/map.png")
         
-        section.home__actividades.ripped-border.ripped-border--gray
-            .container
-                .row
-                    .col-24
-                        h2.home__actividades__title.section-title actividades
-                        p.home__actividades__text Revisa aquí todas las actividades de FIRAN 2019
-                .row
-                    each article in site.data.activities
-                        .col-24.col-sm-8
-                            +article(article, 'noButton')
-                    a.home__actividades__button.button(href="#") ver más
-
-        section.home__momentos.ripped-border.ripped-border--bottom
+        section.home__momentos.ripped-border
+            img.home__momentos__brush-right(src="/images/brush-right.png")
             .container
                 .row
                     .col-24.col-sm-10
@@ -87,7 +89,7 @@ block content
                             i.fa.fa-instagram
                         p.home__momentos__text Aquí podras encontrar carrusel de fotos de instagram con el hashtag #feriarancagua2019
                     .col-24.col-sm-14
-                        +slider('home__momentos__slider')
+                        +slider('home__momentos__slider', 'slider')
                             .home__momentos__slide
                                 a.home__momentos__image(href="#")
                                     img(src="/images/insta-1.jpg")
@@ -114,7 +116,7 @@ block content
                                     img(src="/images/insta-8.jpg")
 
                 .row
-                    .col-24.col-sm-4.offset-sm-6.home__momentos__column
+                    .col-24.col-sm-4.offset-sm-8.home__momentos__column
                         a.home__momentos__group(target="_blank", href="https://www.instagram.com/firan2019/")
                             i.fa.fa-instagram
                             p.home__momentos__red @firan2019
@@ -122,10 +124,10 @@ block content
                         a.home__momentos__group(target="_blank", href="https://www.facebook.com/FeriaRancagua2019/")
                             i.fa.fa-facebook-square
                             p.home__momentos__red /Feriarancagua
-                    .col-24.col-sm-4.home__momentos__column
-                        a.home__momentos__group(target="_blank", href="https://twitter.com/feriarancagua")
-                            i.fa.fa-twitter
-                            p.home__momentos__red @feriarancagua
+                    //- .col-24.col-sm-4.home__momentos__column
+                    //-     a.home__momentos__group(target="_blank", href="https://twitter.com/feriarancagua")
+                    //-         i.fa.fa-twitter
+                    //-         p.home__momentos__red @feriarancagua
         
         section.home__noticias.polygon-bg
             .container

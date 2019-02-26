@@ -133,7 +133,7 @@
             @include mq(sm) {
                 width: 200px;
                 padding: 0;
-    
+
                 &:hover {
                     width: 220px;
                 }
@@ -160,7 +160,7 @@
 
         &__column-wrapper {
             @include mq(sm) {
-                width: 70%;
+                width: 75%;
                 margin-left: 40px;
             }
         }
@@ -183,23 +183,22 @@
         }
     }
 
-    &__actividades {
-        background: $lightestGray;
-
-        &__text {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        &__button {
-            margin-left: auto;
-            margin-right: auto;
-        }
-    }
-
     &__momentos {
         padding-top: 12%;
-        background: url('/images/brush-right.png') no-repeat top right;
+        // position: relative;
+
+        &__brush-right {
+            position: absolute;
+            transform: translateY(-50%);
+            right: 0;
+            top: 50%;
+            width: 70%;
+
+            @include mq(sm) {
+                width: auto;
+                top: 33%;
+            }
+        }
 
         &__link {
             display: block;
@@ -236,9 +235,10 @@
 
         &__slider {
             .slick-dots {
+                display: flex;
                 bottom: -30px;
 
-                li.slick-active button:before,                
+                li.slick-active button:before,
                 button:before {
                     color: $mainColor;
                 }
