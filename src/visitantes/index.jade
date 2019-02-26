@@ -1,8 +1,41 @@
 extends ../_layouts/base
 
+include ../_modules/hero/hero
+include ../_modules/fifty-fifty/fifty-fifty
+
 block config
   //- Correct base url pathing for this page
   - var baseUrl = '../'
 
 block content
-  p visitantes page
+    main.visitantes
+        +hero('Visitantes')
+        section.visitantes__cta.ripped-border.ripped-border--top
+            .container
+                .row
+                    .col-24
+                        .visitantes__cta__content
+                            p.main-text Para saber y conocer los diferentes atractivos turísticos que ofrece nuestra región, descarga el mapa aquí
+                            a.button(href="#")
+                                i.fa.fa-download
+                                | Descarga el mapa
+
+        section.visitantes__hoteles
+            .container
+                .row
+                    .col-24
+                        .visitantes__hoteles__heading
+                            h3.visitantes__hoteles__title Reserva Hoteles
+                        ul.visitantes__hoteles__list
+                            each item in site.data.hoteles
+                                li.visitantes__hotel
+                                    .visitantes__hotel__image
+                                        img(src=item.img)
+                                    .visitantes__hotel__data
+                                        h4.visitantes__hotel__name= item.name
+                                        p.visitantes__hotel__address= item.address
+                                        each link in item.links
+                                            a.visitantes__hotel__link(href=link.url)= link.text
+
+        +fifty-fifty({'title':'Traslados', 'subtitle':'VTS Enjoy Travel <br> (72) 295 2692 / (72) 295 2693 / (72) 295 2694 <br> <a href="mailto:vts@vts.cl">vts@vts.cl</a> / <a href="mailto:contacto@vts.cl">contacto@vts.cl</a> <a href="www.vts.cl">www.vts.cl</a>'}, '/images/visitantes-truck.png')
+        +fifty-fifty({'title':'Volante de la Feria', 'subtitle':'Descarga volante pinchando aquí', 'button':'descarga el volante'}, '/images/visitantes-volante.png', 'imageLeft')

@@ -1,8 +1,102 @@
 extends ../_layouts/base
 
+include ../_modules/hero/hero
+include ../_modules/fifty-fifty/fifty-fifty
+
 block config
   //- Correct base url pathing for this page
   - var baseUrl = '../'
 
 block content
-  p informacion page
+    main.info
+        +hero('Información')
+        section.info__horarios.ripped-border.ripped-border--top
+            .container
+                .row
+                    .col-24
+                        .info__heading
+                            h2.info__title Horario Feria
+                            p.info__subtitle Público y expositores
+                        ul.info__horarios__days
+                            li.info__horarios__day
+                                ._icon
+                                    i.fa.fa-calendar
+                                p._day Jueves 2
+                                p._hour Inicio: 10:00 hrs
+                                p._hour Término: 21:00 hrs
+                            
+                            li.info__horarios__day
+                                ._icon
+                                    i.fa.fa-calendar
+                                p._day Viernes 3
+                                p._hour Inicio: 10:00 hrs
+                                p._hour Término: 21:00 hrs
+                            
+                            li.info__horarios__day
+                                ._icon
+                                    i.fa.fa-calendar
+                                p._day Sábado 4
+                                p._hour Inicio: 10:00 hrs
+                                p._hour Término: 21:00 hrs
+
+        section.info__ubicacion
+            .container
+                .row
+                    .col-24
+                        .info__heading
+                            h2.info__title Dirección / Ubicación
+                            p.info__subtitle Público y expositores
+                .row
+                    .col-24.col-sm-8
+                        p.info__text Medialuna Monumental de Rancagua
+                        br
+                        p.info__text Avenida España con German Ibarra, Rancagua, Región del Libertador Gral. Bernardo O’Higgins
+                        br
+                        br
+                        a.button(href="#") Ver ruta en google maps
+
+                    .col-24.col-sm-16
+                        .info__ubicacion__mapa
+                            iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13206.336921538486!2d-70.7446315!3d-34.1569777!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2aaecb4d7917876e!2sMedialuna+Monumental+de+Rancagua!5e0!3m2!1ses!2sar!4v1551133189021")
+
+        section.info__parking
+            .container
+                .row
+                    .col-24
+                        .info__heading
+                            h2.info__title Estacionamientos
+                .row
+                    .col-24.col-sm-16
+                        .info__parking__mapa
+                            img(src='/images/info-estacionamientos.png')
+                    .col-24.col-sm-8
+                        p.info__text El lugar no cuenta con estacionamientos para el publico general asistente.
+                        br
+                        p.info__text Se indicarán zonas y calles aledañas al recinto para ser utilizadas como estacionamientos.
+
+        section.info__entradas.gray-bg
+            .container
+                .row
+                    .col-24
+                        .info__heading
+                            h2.section-title Valor de Entradas
+                            h3.info__title.info__title--gray Público General
+                        
+                        .info__entradas__app
+                            .info__entradas__app-heading
+                                h4._supertitle Entrada con APP Rancagua 
+                            .info__entradas__app-body
+                                h3._title Gratuita
+                                    p._subtitle (2 tickets por APP)
+                                a.button(href="#") Comprar en la app
+
+        section.info__warning
+            .container
+                .row
+                    .col-24.col-sm-18.col-md-14.offset-sm-3.offset-md-5
+                        .info__warning__content
+                            .info__warning__icon
+                                i.fa.fa-exclamation-triangle
+                            p.info__warning__text Feria Racangua es una feria profesional multisectorial para mayores de edad, es por esto que la organización del evento tendrá la facultad de solicitar la cédula de indentidad o pasaporte (si aplica) para realizar la acreditación y ver que el visitante cumple con 18 años o más. Los menores de edad podrán hacer ingreso en el horario de publico general, siempre y cuando, se encuentren acompañados de un adulto. Los estudiantes de cursos o carreras relacionadas al contenido de la feria, podrán consultar por ingreso especial a través del mail: <a href="mailto:contacto@feriarancagua.cl">contacto@feriarancagua.cl</a>
+
+        +fifty-fifty({'title':'Brochure', 'subtitle':'Descarga el Brochure de “Feria Rancagua 2019”', 'button':'descarga el brochure'}, '/images/info-brochure.png')
