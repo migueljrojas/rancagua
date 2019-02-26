@@ -1,0 +1,115 @@
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+    main.registro
+        section.registro__hero.polygon-bg
+            .registro__hero__wrapper
+                .registro__hero__column.registro__hero__column--left
+                    img(src="/images/registro-hero.png")
+                .registro__hero__column.registro__hero__column--right
+                    .registro__hero__container
+                        .registro__hero__logo
+                            img(src="/images/logo-white.png")
+                        h2.registro__hero__title Una feria de oportunidades y capacidades del 2 al 4 de Mayo
+                        p.registro__hero__text Lo invitamos a participar de charlas, exposiciones, intervenciones artísticas, shows musicales, zonas gastronómicas y más...
+                        
+        section.registro__oportunidad.ripped-border.ripped-border--top
+            .registro__oportunidad__row.registro__oportunidad__row--top
+                .container
+                    .row
+                        .col-24.col-sm-8.registro__oportunidad__container
+                            .registro__oportunidad__wrapper
+                                .registro__oportunidad__group
+                                    i.fa.fa-calendar
+                                    h3.registro__oportunidad__title Fecha
+                                p.registro__oportunidad__text.registro__oportunidad__text--blue 02 - 03 - 04 de Mayo 
+                        .col-24.col-sm-8.registro__oportunidad__container
+                            .registro__oportunidad__wrapper
+                                .registro__oportunidad__group
+                                    i.fa.fa-map-marker
+                                    h3.registro__oportunidad__title Lugar
+                                p.registro__oportunidad__text.registro__oportunidad__text--blue Medialuna Monumental de Rancagua 
+                                p.registro__oportunidad__text Avenida España con German Ibarra, Rancagua
+                                p.registro__oportunidad__text Región del Libertador Gral. Bernardo O'Higgins
+                        .col-24.col-sm-8.registro__oportunidad__container
+                            .registro__oportunidad__wrapper
+                                .registro__oportunidad__group
+                                    i.fa.fa-clock-o
+                                    h3.registro__oportunidad__title Sólo falta
+                                ul.registro__oportunidad__list
+                                    li.registro__oportunidad__list-item
+                                        span.registro__oportunidad__number 89
+                                        p.registro__oportunidad__subtext días
+                                    li.registro__oportunidad__list-item
+                                        span.registro__oportunidad__number 6
+                                        p.registro__oportunidad__subtext horas
+                                    li.registro__oportunidad__list-item
+                                        span.registro__oportunidad__number 18
+                                        p.registro__oportunidad__subtext minutos
+                                    li.registro__oportunidad__list-item
+                                        span.registro__oportunidad__number 57
+                                        p.registro__oportunidad__subtext segundos
+            .home__oportunidad__row
+                .container
+                    .row
+                        .col-24.col-sm-12
+                            .registro__oportunidad__column.registro__oportunidad__column--left
+                                img(src="/images/home-oportunidad.png")
+                        .col-24.col-sm-12
+                            .registro__oportunidad__column
+                                .registro__oportunidad__column-wrapper
+                                    h3.registro__oportunidad__wrapper-title Feria rancagua 2019
+                                    .registro__oportunidad__wrapper-group
+                                        p.registro__oportunidad__wrapper-text Tiene por objetivo mostrar todas las oportunidades y capacidades que ogrece la ciudad de Rancagua a sus habitantes y el mundo.
+                                        p.registro__oportunidad__wrapper-text Durante tres días de feria, se realizarán diversas actividades de tipo cultural y empresarial: charlas, exposiciones, intervenciones artisticas, shows musicales, zonas gastronomicas y más.
+                                        p.registro__oportunidad__wrapper-text Invitamos a todos los sectores productivos, de servicios y al público en general, a ser protagonistas de esta feria.
+                                    a.button descargar especificaciones
+
+        section.registro__participar
+            .container
+                .row
+                    .col-24
+                        .registro__participar__container
+                            img(src="/images/registro-title-banner.jpg")
+                            h2.registro__participar__title ¿quieres participar?
+
+                .registro__participar__row.registro__participar__row--divider
+                    .row
+                        .col-24.col-sm-12
+                            h3.registro__participar__subtitle cómo participar
+                            p.registro__participar__text Para ser parte de la Feria Rancagua 2019, <a href="#">descarga el contrato</a> y rellena los campos PDF (para hacerlo, usa Adobe Reader. Si no sabes cómo haceerlo, <span>revisa este tutorial</span>)
+                            p.registro__participar__text Una vez rellenado el PDF, debes volver a subirlo usando el mismo formulario junto a tu nombre, mail y tipo de auspicio.
+                        .col-24.col-sm-12
+                            .registro__participar__image
+                                img(src="/images/registro-foto-2.png")
+                
+                .registro__participar__row
+                    .row
+                        .col-24.col-sm-8
+                            p.registro__participar__blue-text 1. Descarga el contrato
+                            button.button descargar contrato
+                            p.registro__participar__blue-text 2. Una vez rellenado el contrato, usa este formulario para enviarlo
+                            form.form
+                                .form__group
+                                    label.form__label Nombre*
+                                    input.form__input(type='text')
+                                .form__group
+                                    label.form__label Email*
+                                    input.form__input(type='email')
+                                .form__group
+                                    label.form__label tipo de auspicio*
+                                    select.form__input.form__input--select(type='email')
+                                        option(hidden disabled selected) Selecciona un tipo de auspicio
+                                        option Opcion 1
+                                        option Opcion 2
+                                        option Opcion 3
+                                        option Opcion 4
+                                        option Opcion 5
+                                .form__group
+                                    label.form__label Subir contrato*
+                                    input(type="file" name="Seleccionar archivo")
+                                button.button enviar

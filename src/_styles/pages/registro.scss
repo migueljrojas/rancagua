@@ -1,4 +1,4 @@
-.home {
+.registro {
     &__hero {
         padding-bottom: 100px;
         &__wrapper {
@@ -66,7 +66,6 @@
             margin-bottom: 20px;
         }
     }
-
     &__oportunidad {
         &__row {
             display: flex;
@@ -76,6 +75,16 @@
                 margin-bottom: 20px;
                 padding-bottom: 20px;
                 border-bottom: 1px solid $lightGray;
+            }
+        }
+
+        &__column {
+            &--left {
+                height: 35vh;
+
+                @include mq(sm) {
+                    height: auto;
+                }
             }
         }
 
@@ -108,7 +117,7 @@
 
             i {
                 color: $blue;
-                margin-right: 20px;
+                margin-right: 10px;
             }
         }
 
@@ -126,22 +135,34 @@
             }
         }
 
-        &__button {
-            border: 1px solid $blue !important;
-            margin-left: auto;
-            margin-right: auto;
-            width: 47%;
+        &__list {
+            display: flex;
+        }
 
-            @include mq(sm) {
-                width: 52%;
+        &__list-item {
+            border: 4px solid $blue;
+            border-radius: 50%;
+            height: 65px;
+            width: 65px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
+            &:not(:last-child) {
+                margin-right: 10px;
             }
+        }
 
-            &:first-child {
-                @include mq(sm) {
-                    margin-bottom: 10px;
-                }
-            }
+        &__number {
+            font-size: 16px;
+            font-weight: 900;
+        }
+
+        &__subtext {
+            font-size: 8px;
+            margin: 0;
+            text-transform: uppercase;
         }
 
         &__column {
@@ -165,18 +186,74 @@
 
         &__column-wrapper {
             @include mq(sm) {
-                width: 70%;
                 margin-left: 40px;
             }
         }
 
+        &__wrapper-title {
+            color: $blue;
+            text-transform: uppercase;
+        }
+
         &__wrapper-group {
-            margin-top: 40px;
+            margin: 40px 0;
+        }
+
+        &__wrapper-text {
+            margin-bottom: 20px;
         }
     }
 
-    &__quien-participa {
-        padding: 100px 0;
+    &__participar {
+        padding: 40px 0;
+
+        &__container {
+            position: relative;
+            margin-bottom: 40px;
+
+            img {
+                width: 100%;
+                height: auto;
+                z-index: -1;
+            }
+        }
+
+        &__row {
+            &--divider {
+                border-bottom: 1px solid $lightGray;
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+            }
+        }
+
+        &__title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+            margin: 0;
+            color: $white;
+            text-transform: uppercase;
+            font-size: 24px;
+            white-space: nowrap;
+
+            @include mq(sm) {
+                font-size: 36px;
+            }
+        }
+
+        &__subtitle {
+            color: $blue;
+            text-transform: uppercase;
+        }
+
+        &__text {
+            font-size: 14px;
+
+            span {
+                color: $blue;
+            }
+        }
 
         &__image {
             width: 100%;
@@ -186,96 +263,11 @@
                 height: auto;
             }
         }
-    }
 
-    &__actividades {
-        background: $lightestGray;
-
-        &__text {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        &__button {
-            margin-left: auto;
-            margin-right: auto;
-        }
-    }
-
-    &__momentos {
-        padding-top: 100px;
-
-        @include mq(sm) {
-            padding: 100px 0 120px 0;
-
-        }
-
-        &__link {
-            display: block;
-            text-align: center;
-            font-size: 30px;
-        }
-
-        &__text {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        &__wrapper {
-            display: flex;
-            flex-wrap: wrap;
-            margin-bottom: 40px;
-        }
-
-        &__image {
-            height: 0;
-            overflow: hidden;
-            position: relative;
-            width: 50%;
-            padding-bottom: 50%;
-
-            @include mq(sm) {
-                width: 25%;
-                padding-bottom: 25%;
-
-            }
-
-            img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                width: 100%;
-            }
-        }
-
-        &__column {
-            display: flex;
-            justify-content: center;
-        }
-
-        &__group {
-            display: flex;
-            align-items: center;
-
-            @include mq(sm) {
-                margin-bottom: 0;
-            }
-
-            i {
-                margin-right: 10px;
-                color: $blue;
-                font-size: 30px;
-            }
-        }
-
-        &__red {
+        &__blue-text {
+            color: $blue;
             font-size: 16px;
+            margin-bottom: 30px;
         }
-    }
-
-    &__noticias {
-        padding: 100px 0;
     }
 }

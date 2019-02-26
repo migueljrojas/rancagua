@@ -1,8 +1,41 @@
 extends ../_layouts/base
 
+include ../_modules/hero/hero
+
 block config
   //- Correct base url pathing for this page
   - var baseUrl = '../'
 
 block content
-  p contacto page
+    main.contacto
+        +hero('contacto')
+        
+        section.contacto__map
+            iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3301.5842311439947!2d-70.74682018478218!3d-34.15697768057755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9663430db34c7b57%3A0x2aaecb4d7917876e!2sMedialuna+Monumental+de+Rancagua!5e0!3m2!1ses-419!2sar!4v1551158388980" width="600" height="450" frameborder="0" style="border:0" allowfullscreen)
+
+        section.contacto__form
+            .container
+                .row
+                    .col-24.col-sm-8.offset-sm-3
+                        h2.contacto__form__title formulario de contacto
+                        form.form
+                            .form__group
+                                label.form__label Nombre*
+                                input.form__input(type="text")
+                            .form__group
+                                label.form__label Correo electrónico*
+                                input.form__input(type="email")
+                            .form__group
+                                label.form__label teléfono*
+                                input.form__input(type="number")
+                            .form__group
+                                label.form__label mensaje*
+                                textarea.form__input.form__input--textarea
+                            button.button enviar
+                    .col-24.col-sm-8.offset-sm-3
+                        h2.contacto__form__title información de contacto
+                        a.contacto__form__link(href="#") contacto@feriarancagua.cl
+                        .contacto__form__group
+                            p.contacto__form__phone Teléfonos:
+                            a.contacto__form__link(href="#") (+56) 72 2 605380
+                        

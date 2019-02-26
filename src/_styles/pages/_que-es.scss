@@ -19,7 +19,7 @@
             text-transform: uppercase;
             margin: 0 0 20px;
             line-height: 1;
-    
+
             @include mq(md) {
                 font-size: 64px;
                 margin: 0 0 40px;
@@ -37,7 +37,7 @@
 
         &__heading {
             text-align: center;
-            padding: 40px 0;
+            padding-bottom: 40px;
         }
 
         &__plans {

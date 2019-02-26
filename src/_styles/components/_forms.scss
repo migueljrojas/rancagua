@@ -74,8 +74,8 @@
         }
 
         &--file {
-            position: absolute;
-            left: -9999px;
+            // position: absolute;
+            // left: -9999px;
         }
     }
 
@@ -87,6 +87,7 @@
         text-transform: uppercase;
         display: block;
         color: $darkGray;
+        margin-bottom: 10px;
 
         &--checkbox {
             padding-left: 30px;
