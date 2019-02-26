@@ -45,7 +45,7 @@ block content
                                 p.main-text.main-text--large A continuación podrás descargar el <strong>MAPA FERIAL</strong> de la feria
                             .about__blueprint__plans
                                 img.about__blueprint__image(src="/images/plano-feria.png")
-                                a.button(href="#")
+                                a.button(href="/images/planos-firan-2019.pdf", target="_blank")
                                     i.fa.fa-download
                                     | Descargar el plano de la feria
             .expositores__plano__listado
@@ -97,4 +97,4 @@ block content
                             .expositores__plano__stands-image
                                 img(src="/images/expositores-stand-3.png")
 
-        +fifty-fifty({'title':'Manual del expositor', 'subtitle':'Descarga las bases y condiciones de nuestra feria', 'button':'descarga manual'}, '/images/expositores-manual.png', 'imageLeft')
+        +fifty-fifty({'title':'Manual del expositor', 'subtitle':'Descarga las bases y condiciones de nuestra feria', 'button':{'text':'descarga manual', 'url':'/images/manual-expositores-firan-2019.pdf'}}, '/images/expositores-manual.png', 'imageLeft')

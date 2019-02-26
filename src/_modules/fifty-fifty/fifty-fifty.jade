@@ -11,9 +11,9 @@ mixin fifty-fifty(data, image, mode)
                             h3.fifty-fifty__title.section-title.section-title--left!= data.title
                             h3.fifty-fifty__subtitle!= data.subtitle
                             if data.button
-                                a.button(href="#")
+                                a.button(href=data.button.url, target="_blank")
                                     i.fa.fa-download
-                                    |#{data.button}
+                                    |#{data.button.text}
                     
 
                 else
@@ -22,9 +22,9 @@ mixin fifty-fifty(data, image, mode)
                             h3.fifty-fifty__title.section-title.section-title--left!= data.title
                             p.fifty-fifty__subtitle!= data.subtitle
                             if data.button
-                                a.button(href="#")
+                                a.button(href=data.button.url, target="_blank")
                                     i.fa.fa-download
-                                    |#{data.button}
+                                    |#{data.button.text}
                     .col-24.col-sm-13
                         .fifty-fifty__image
                             img(src=image)

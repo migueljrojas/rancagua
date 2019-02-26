@@ -21,38 +21,37 @@ block content
             .registro__oportunidad__row.registro__oportunidad__row--top
                 .container
                     .row
-                        .col-24.col-sm-8.registro__oportunidad__container
-                            .registro__oportunidad__wrapper
-                                .registro__oportunidad__group
-                                    i.fa.fa-calendar
-                                    h3.registro__oportunidad__title Fecha
-                                p.registro__oportunidad__text.registro__oportunidad__text--blue 02 - 03 - 04 de Mayo 
-                        .col-24.col-sm-8.registro__oportunidad__container
-                            .registro__oportunidad__wrapper
-                                .registro__oportunidad__group
-                                    i.fa.fa-map-marker
-                                    h3.registro__oportunidad__title Lugar
-                                p.registro__oportunidad__text.registro__oportunidad__text--blue Medialuna Monumental de Rancagua 
-                                p.registro__oportunidad__text Avenida España con German Ibarra, Rancagua
-                                p.registro__oportunidad__text Región del Libertador Gral. Bernardo O'Higgins
-                        .col-24.col-sm-8.registro__oportunidad__container
-                            .registro__oportunidad__wrapper
-                                .registro__oportunidad__group
-                                    i.fa.fa-clock-o
-                                    h3.registro__oportunidad__title Sólo falta
-                                ul.registro__oportunidad__list
-                                    li.registro__oportunidad__list-item
-                                        span.registro__oportunidad__number 89
-                                        p.registro__oportunidad__subtext días
-                                    li.registro__oportunidad__list-item
-                                        span.registro__oportunidad__number 6
-                                        p.registro__oportunidad__subtext horas
-                                    li.registro__oportunidad__list-item
-                                        span.registro__oportunidad__number 18
-                                        p.registro__oportunidad__subtext minutos
-                                    li.registro__oportunidad__list-item
-                                        span.registro__oportunidad__number 57
-                                        p.registro__oportunidad__subtext segundos
+                        .col-24
+                            .registro__oportunidad__container
+                                .registro__oportunidad__wrapper
+                                    .registro__oportunidad__group
+                                        i.fa.fa-calendar
+                                        h3.registro__oportunidad__title Fecha
+                                    p.registro__oportunidad__text.registro__oportunidad__text--blue 02 - 03 - 04 de Mayo 
+                                .registro__oportunidad__wrapper
+                                    .registro__oportunidad__group
+                                        i.fa.fa-map-marker
+                                        h3.registro__oportunidad__title Lugar
+                                    p.registro__oportunidad__text.registro__oportunidad__text--blue Medialuna Monumental de Rancagua 
+                                    p.registro__oportunidad__text Avenida España con German Ibarra, Rancagua
+                                    p.registro__oportunidad__text Región del Libertador Gral. Bernardo O'Higgins
+                                .registro__oportunidad__wrapper
+                                    .registro__oportunidad__group
+                                        i.fa.fa-clock-o
+                                        h3.registro__oportunidad__title Sólo falta
+                                    ul.registro__oportunidad__list
+                                        li.registro__oportunidad__list-item
+                                            span.registro__oportunidad__number 89
+                                            p.registro__oportunidad__subtext días
+                                        li.registro__oportunidad__list-item
+                                            span.registro__oportunidad__number 6
+                                            p.registro__oportunidad__subtext horas
+                                        li.registro__oportunidad__list-item
+                                            span.registro__oportunidad__number 18
+                                            p.registro__oportunidad__subtext minutos
+                                        li.registro__oportunidad__list-item
+                                            span.registro__oportunidad__number 57
+                                            p.registro__oportunidad__subtext segundos
             .home__oportunidad__row
                 .container
                     .row
@@ -89,19 +88,22 @@ block content
                 
                 .registro__participar__row
                     .row
-                        .col-24.col-sm-8
+                        .col-24.col-sm-12.col-lg-10
                             p.registro__participar__blue-text 1. Descarga el contrato
                             button.button descargar contrato
                             p.registro__participar__blue-text 2. Una vez rellenado el contrato, usa este formulario para enviarlo
                             form.form
                                 .form__group
-                                    label.form__label Nombre*
+                                    label.form__label Nombre
+                                        i *
                                     input.form__input(type='text')
                                 .form__group
-                                    label.form__label Email*
+                                    label.form__label Email
+                                        i *
                                     input.form__input(type='email')
                                 .form__group
-                                    label.form__label tipo de auspicio*
+                                    label.form__label tipo de auspicio
+                                        i *
                                     select.form__input.form__input--select(type='email')
                                         option(hidden disabled selected) Selecciona un tipo de auspicio
                                         option Opcion 1
@@ -110,6 +112,10 @@ block content
                                         option Opcion 4
                                         option Opcion 5
                                 .form__group
-                                    label.form__label Subir contrato*
-                                    input(type="file" name="Seleccionar archivo")
+                                    input.form__input.form__input--file(type="file", name="Seleccionar archivo", id="contract-file")
+                                    label.form__label.form__label--file(for="contract-file")
+                                        span.txt Subir contrato
+                                            i *
+                                        span.btn Carga
+                                        
                                 button.button enviar

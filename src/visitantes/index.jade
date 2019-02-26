@@ -16,7 +16,7 @@ block content
                     .col-24
                         .visitantes__cta__content
                             p.main-text Para saber y conocer los diferentes atractivos turísticos que ofrece nuestra región, descarga el mapa aquí
-                            a.button(href="#")
+                            a.button(href="/images/plano-turistico-firan-2019.pdf", target="_blank")
                                 i.fa.fa-download
                                 | Descarga el mapa
 
@@ -38,4 +38,4 @@ block content
                                             a.visitantes__hotel__link(href=link.url)= link.text
 
         +fifty-fifty({'title':'Traslados', 'subtitle':'VTS Enjoy Travel <br> (72) 295 2692 / (72) 295 2693 / (72) 295 2694 <br> <a href="mailto:vts@vts.cl">vts@vts.cl</a> / <a href="mailto:contacto@vts.cl">contacto@vts.cl</a> <a href="www.vts.cl">www.vts.cl</a>'}, '/images/visitantes-truck.png')
-        +fifty-fifty({'title':'Volante de la Feria', 'subtitle':'Descarga volante pinchando aquí', 'button':'descarga el volante'}, '/images/visitantes-volante.png', 'imageLeft')
+        +fifty-fifty({'title':'Volante de la Feria', 'subtitle':'Descarga volante pinchando aquí', 'button':{'text':'descarga el volante', 'url':'/images/volante-firan-2019.pdf'}}, '/images/visitantes-volante.png', 'imageLeft')

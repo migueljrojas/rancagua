@@ -1,4 +1,4 @@
-mixin article(article)
+mixin article(article, mode)
     .article
         .article__image
             a(href="#")
@@ -7,4 +7,6 @@ mixin article(article)
             a(href="#")
                 h3.article__title= article.title
             p.article__text= article.summary
-            a.button(href="#") Leer más
+
+            if mode != 'noButton'
+                a.button(href="#") Leer más

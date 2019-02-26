@@ -1,6 +1,7 @@
 extends _layouts/base
 
 include ./_modules/article/article
+include ./_modules/slider/slider
 
 block content
     main.home
@@ -14,7 +15,7 @@ block content
                             img(src="/images/logo-white.png")
                         h2.home__hero__title Una feria de oportunidades y capacidades del 2 al 4 de Mayo
                         p.home__hero__text Lo invitamos a participar de charlas, exposiciones, intervenciones artísticas, shows musicales, zonas gastronómicas y más...
-                        a.button.button--white.home__hero__button(href="#") registrarme
+                        a.button.button--white(href="#") registrarme
                         
         section.home__oportunidad.ripped-border
             .home__oportunidad__row.home__oportunidad__row--top
@@ -34,11 +35,11 @@ block content
                                 p.home__oportunidad__text.home__oportunidad__text--blue Medialuna Monumental de Rancagua 
                                 p.home__oportunidad__text Avenida España con German Ibarra, Rancagua
                                 p.home__oportunidad__text Región del Libertador Gral. Bernardo O'Higgins
-                        .col-24.col-sm-8.home__oportunidad__container
-                            .home__oportunidad__wrapper
-                                .home__oportunidad__group
-                                    a.button.home__oportunidad__button quiero exponer
-                                    a.button.button--white.home__oportunidad__button quiero auspiciar
+                        .col-24.col-sm-8.text-right                        
+                            a.button.home__oportunidad__button(href="#") quiero exponer
+                            br
+                            br
+                            a.button.button--ghost.home__oportunidad__button(href="#") quiero auspiciar
             
             .home__oportunidad__row
                 .container
@@ -70,51 +71,59 @@ block content
                 .row
                     .col-24
                         h2.home__actividades__title.section-title actividades
-                        p.home__actividades__text Revisa aquí todas las actividades de la Feria Rancagua 2019
+                        p.home__actividades__text Revisa aquí todas las actividades de FIRAN 2019
                 .row
                     each article in site.data.activities
                         .col-24.col-sm-8
-                            +article(article)
+                            +article(article, 'noButton')
                     a.home__actividades__button.button(href="#") ver más
 
         section.home__momentos.ripped-border.ripped-border--bottom
             .container
                 .row
-                    .col-24
-                        h2.home__momentos__title.section-title Momentos de feria
+                    .col-24.col-sm-10
+                        h2.home__momentos__title.section-title.section-title--left Momentos de feria
                         a.home__momentos__link
                             i.fa.fa-instagram
                         p.home__momentos__text Aquí podras encontrar carrusel de fotos de instagram con el hashtag #feriarancagua2019
-                .row
-                    .col-24.col-sm-18.offset-sm-3
-                        .home__momentos__wrapper
-                            a.home__momentos__image(href="#")
-                                img(src="/images/insta-1.jpg")
-                            a.home__momentos__image(href="#")
-                                img(src="/images/insta-2.jpg")
-                            a.home__momentos__image(href="#")
-                                img(src="/images/insta-3.jpg")
-                            a.home__momentos__image(href="#")
-                                img(src="/images/insta-4.jpg")
-                            a.home__momentos__image(href="#")
-                                img(src="/images/insta-5.jpg")
-                            a.home__momentos__image(href="#")
-                                img(src="/images/insta-6.jpg")
-                            a.home__momentos__image(href="#")
-                                img(src="/images/insta-7.jpg")
-                            a.home__momentos__image(href="#")
-                                img(src="/images/insta-8.jpg")
+                    .col-24.col-sm-14
+                        +slider('home__momentos__slider')
+                            .home__momentos__slide
+                                a.home__momentos__image(href="#")
+                                    img(src="/images/insta-1.jpg")
+                            .home__momentos__slide
+                                a.home__momentos__image(href="#")
+                                    img(src="/images/insta-2.jpg")
+                            .home__momentos__slide
+                                a.home__momentos__image(href="#")
+                                    img(src="/images/insta-3.jpg")
+                            .home__momentos__slide
+                                a.home__momentos__image(href="#")
+                                    img(src="/images/insta-4.jpg")
+                            .home__momentos__slide
+                                a.home__momentos__image(href="#")
+                                    img(src="/images/insta-5.jpg")
+                            .home__momentos__slide
+                                a.home__momentos__image(href="#")
+                                    img(src="/images/insta-6.jpg")
+                            .home__momentos__slide
+                                a.home__momentos__image(href="#")
+                                    img(src="/images/insta-7.jpg")
+                            .home__momentos__slide
+                                a.home__momentos__image(href="#")
+                                    img(src="/images/insta-8.jpg")
+
                 .row
                     .col-24.col-sm-4.offset-sm-6.home__momentos__column
-                        a.home__momentos__group(href="#")
+                        a.home__momentos__group(target="_blank", href="https://www.instagram.com/firan2019/")
                             i.fa.fa-instagram
-                            p.home__momentos__red @feriarancagua
+                            p.home__momentos__red @firan2019
                     .col-24.col-sm-4.home__momentos__column
-                        a.home__momentos__group(href="#")
+                        a.home__momentos__group(target="_blank", href="https://www.facebook.com/FeriaRancagua2019/")
                             i.fa.fa-facebook-square
                             p.home__momentos__red /Feriarancagua
                     .col-24.col-sm-4.home__momentos__column
-                        a.home__momentos__group(href="#")
+                        a.home__momentos__group(target="_blank", href="https://twitter.com/feriarancagua")
                             i.fa.fa-twitter
                             p.home__momentos__red @feriarancagua
         

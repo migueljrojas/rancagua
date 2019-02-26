@@ -74,8 +74,8 @@
         }
 
         &--file {
-            // position: absolute;
-            // left: -9999px;
+            position: absolute;
+            left: -9999px;
         }
     }
 
@@ -88,6 +88,10 @@
         display: block;
         color: $darkGray;
         margin-bottom: 10px;
+
+        i {
+            color: #c00;
+        }
 
         &--checkbox {
             padding-left: 30px;
@@ -228,7 +232,6 @@
 
                 display: inline-block;
                 padding: 0 25px;
-                border-radius: 5px;
                 text-decoration: none;
                 cursor: pointer;
                 white-space: nowrap;
@@ -239,9 +242,9 @@
                 text-align: center;
                 min-width: 120px;
                 border:none;
-                border: 2px solid $orange;
+                border: 2px solid $mainColor;
                 background: transparent;
-                color: $orange;
+                color: $mainColor;
 
                 &:hover {
                     background: rgba(0,0,0,.05);

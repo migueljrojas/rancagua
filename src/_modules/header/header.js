@@ -53,6 +53,15 @@ var Header = function() {
             }
         }
     });
+
+    var contractFile = $('#contract-file');
+    var contractLabel = $('[for="#contract-file"]');
+
+    contractFile.on('change', function() {
+        var value = $(this).val().replace('C:\\fakepath\\', '');
+
+        contractLabel.find('.txt').html(value);
+    });
 };
 
 module.exports = Header;

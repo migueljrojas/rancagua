@@ -73,8 +73,8 @@
             flex-wrap: wrap;
 
             &--top {
-                margin-bottom: 20px;
-                padding-bottom: 20px;
+                margin-bottom: 4%;
+                padding-bottom: 4%;
                 border-bottom: 1px solid $lightGray;
             }
         }
@@ -127,35 +127,30 @@
         }
 
         &__button {
-            border: 1px solid $blue !important;
-            margin-left: auto;
-            margin-right: auto;
-            width: 47%;
+            width: 100%;
+            padding: 0;
 
             @include mq(sm) {
-                width: 52%;
-
-            }
-
-            &:first-child {
-                @include mq(sm) {
-                    margin-bottom: 10px;
+                width: 200px;
+                padding: 0;
+    
+                &:hover {
+                    width: 220px;
                 }
             }
         }
 
         &__column {
-            width: 90%;
             margin-left: auto;
             margin-right: auto;
             position: relative;
 
             img {
-                position: absolute;
                 top: 0;
                 left: 0;
                 width: 100%;
                 height: auto;
+                margin-bottom: 40px;
             }
 
             @include mq(sm) {
@@ -176,7 +171,7 @@
     }
 
     &__quien-participa {
-        padding: 100px 0;
+        padding: 12% 0;
 
         &__image {
             width: 100%;
@@ -203,21 +198,17 @@
     }
 
     &__momentos {
-        padding-top: 100px;
-
-        @include mq(sm) {
-            padding: 100px 0 120px 0;
-
-        }
+        padding-top: 12%;
+        background: url('/images/brush-right.png') no-repeat top right;
 
         &__link {
             display: block;
-            text-align: center;
+            text-align: left;
             font-size: 30px;
         }
 
         &__text {
-            text-align: center;
+            text-align: left;
             margin-bottom: 40px;
         }
 
@@ -231,28 +222,33 @@
             height: 0;
             overflow: hidden;
             position: relative;
-            width: 50%;
-            padding-bottom: 50%;
-
-            @include mq(sm) {
-                width: 25%;
-                padding-bottom: 25%;
-
-            }
+            width: 100%;
+            padding-bottom: 70%;
+            display: block;
 
             img {
                 position: absolute;
                 top: 0;
                 left: 0;
-                right: 0;
-                bottom: 0;
                 width: 100%;
+            }
+        }
+
+        &__slider {
+            .slick-dots {
+                bottom: -30px;
+
+                li.slick-active button:before,                
+                button:before {
+                    color: $mainColor;
+                }
             }
         }
 
         &__column {
             display: flex;
             justify-content: center;
+            padding-top: 4%;
         }
 
         &__group {
@@ -276,6 +272,6 @@
     }
 
     &__noticias {
-        padding: 100px 0;
+        padding: 10% 0;
     }
 }

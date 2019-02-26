@@ -162,6 +162,8 @@
             margin: auto;
             border-radius: 7px;
             text-align: center;
+            position: relative;
+            z-index: 10;
         }
 
         &__app-heading {
@@ -184,11 +186,11 @@
             justify-content: space-between;
             height: 330px;
             padding: 15px;
-            background: url('/images/cell.png') no-repeat center bottom;
+            background: url('/images/cell.jpg') no-repeat -50px bottom / cover;
 
             ._title {
                 font-size: 28px;
-                color: $mainColor;
+                color: $white;
                 font-weight:900; 
                 text-transform: uppercase;
                 margin: 0;
