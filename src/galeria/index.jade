@@ -1,8 +1,21 @@
 extends ../_layouts/base
 
+include ../_modules/hero/hero
+
 block config
   //- Correct base url pathing for this page
   - var baseUrl = '../'
 
 block content
-  p galeria page
+    main.galeria
+        +hero('Galería')
+        section.galeria__body.ripped-border.ripped-border--top
+            .container
+                .row
+                    - for (var i = 0; i < 9; ++i) {
+                    .col-12.col-sm-8
+                        a.galeria__image(href='/images/foto-#{i + 1}.jpg')
+                            img(src='/images/foto-#{i + 1}.jpg')
+                            button.button.button--white ver grande
+                    - }
+                    
