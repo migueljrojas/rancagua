@@ -1,0 +1,77 @@
+[
+    {
+        "img":"/images/visitantes-hotel-1.jpg",
+        "name":"HOTEL DIEGO DE ALMAGRO (72) 235 1400",
+        "address":"Av. Libertador Bernardo O’higgins 34, Rancagua",
+        "links":[
+            {
+                "url":"mailto:recepción-rcg@dahoteles.com",
+                "text":"recepción-rcg@dahoteles.com"
+            },
+            {
+                "url":"//www.dahoteles.com",
+                "text":"www.dahoteles.com"
+            }
+        ]
+    },
+    {
+        "img":"/images/visitantes-hotel-2.jpg",
+        "name":"HOTEL MANQUEHUE (72) 235 2000",
+        "address":"Av. Alberto Einstein 290, Piso 4, Rancagua",
+        "links":[
+            {
+                "url":"mailto:recepcionrancagua@manquehuehoteles.cl",
+                "text":"recepcionrancagua@ manquehuehoteles.cl"
+            },
+            {
+                "url":"//www.manquehuehoteles.cl",
+                "text":"www.manquehuehoteles.cl"
+            }
+        ]
+    },
+    {
+        "img":"/images/visitantes-hotel-3.jpg",
+        "name":"HOTEL MAR ANDINO (72) 264 5400",
+        "address":"Av. Alberto Einstein 290, Piso 4, Rancagua",
+        "links":[
+            {
+                "url":"mailto:gonzalo.salazar@marandino.cl",
+                "text":"gonzalo.salazar@ marandino.cl"
+            },
+            {
+                "url":"//www.hotelmarandino.cl",
+                "text":"www.hotelmarandino.cl"
+            }
+        ]
+    },
+    {
+        "img":"/images/visitantes-hotel-4.jpg",
+        "name":"HOTEL NOI PUMA LODGE (72) 274 1385 | +569 6308 2491",
+        "address":"Av. Alberto Einstein 290, Piso 4, Rancagua",
+        "links":[
+            {
+                "url":"mailto:reseva@noihoteles.com",
+                "text":"reseva@noihoteles.com"
+            },
+            {
+                "url":"//www.noihotels.com",
+                "text":"www.noihotels.com"
+            }
+        ]
+    },
+    {
+        "img":"/images/visitantes-hotel-5.jpg",
+        "name":"HOTEL PIEDRA VERDE (72) 231 2000",
+        "address":"Av. Alberto Einstein 290, Piso 4, Rancagua",
+        "links":[
+            {
+                "url":"mailto:fangelini@hotelpiedraverde.cl",
+                "text":"fangelini@hotelpiedraverde.cl"
+            },
+            {
+                "url":"//www.hotelpiedraverde.cl",
+                "text":"www.hotelpiedraverde.cl"
+            }
+        ]
+    }
+]

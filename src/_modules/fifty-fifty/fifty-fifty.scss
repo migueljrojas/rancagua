@@ -9,8 +9,9 @@
         img{
             position: absolute;
             height: 100%;
-            right: 0;
+            left: 0;
             width: auto;
+            min-width: 100%;
         }
     }
 
@@ -36,5 +37,20 @@
     &__subtitle {
         font-size: 18px; 
         margin: 0 0 40px;
+    }
+
+    &--img-left {
+        .fifty-fifty__image {
+            img {
+                left: auto;
+                right: 0;
+            }
+        }
+
+        .fifty-fifty__data {
+            @include mq(sm) {
+                left:45%;
+            }
+        }
     }
 }
