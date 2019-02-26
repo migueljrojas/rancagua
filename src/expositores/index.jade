@@ -1,8 +1,101 @@
 extends ../_layouts/base
 
+include ../_modules/hero/hero
+
 block config
   //- Correct base url pathing for this page
   - var baseUrl = '../'
 
 block content
-  p expositores page
+    main.expositores
+        +hero('expositores')
+        
+        section.expositores__por-que-exponer.ripped-border
+            .container
+                .row
+                    .col-24.col-sm-12.offset-sm-6
+                        h2.expositores__por-que-exponer__title.section-title ¿por qué exponer?
+                .row
+                    .col-24.col-sm-14.offset-sm-5
+                        p.expositores__por-que-exponer__text Es la instancion en donde convergen las distintas áreas económicas y sociales de la región, en un espacio multisectorial potenciando sus capacidades de desarrollo y productos de alto nivel, oportunidad de presentar las novedades al mercado nacional e internacional.
+                        p.expositores__por-que-exponer__text Esta versión apuesta por la innovación, la virtud a la reutilización y a potenciar las capacidades de la comunidad.
+                        p.expositores__por-que-exponer__text.expositores__por-que-exponer__text--bold Generar nuevas oportunidades de negocios y vínculos comerciales
+        
+        section.expositores__quienes-exponen.polygon-bg
+            .container
+                .row
+                    .col-24.col-sm-14.offset-sm-5
+                        h2.expositores__quienes-exponen__title.section-title.section-title--white ¿quienes exponen?
+                .row
+                    .col-24.col-sm-14.offset-sm-5
+                        p.expositores__quienes-exponen__text Participan proveedores, productores y distribuidores de materias primas, productos y servicios, tales como:
+                .row
+                    .col-24
+                        .expositores__quienes-exponen__image
+                            img(src="/images/map.png")
+
+        section.expositores__plano.ripped-border.ripped-border--top
+            .container
+                .row
+                    .col-24.col-sm-14.offset-sm-5
+                        h2.expositores__plano__title.section-title plano de la feria
+                .row
+                    .col-24.col-sm-14.offset-sm-5
+                        p.expositores__plano__text A continuación podrás descargar el <strong>MAPA FERIAL</strong> de la feria
+                .row
+                    .col-24
+                        .expositores__plano__image
+                            img(src="/images/plano-feria.png")
+                .row
+                    .col-24.expositores__plano__column
+                        a.button.expositores__plano__button(href="#")
+                            i.fa.fa-download
+                            p descarga plano ferial
+            .expositores__plano__listado
+                .container
+                    .row
+                        .col-24
+                            h3.expositores__plano__listado-title listado de expositores
+                            p.expositores__plano__listado-text Para conocer los participantes de la feria, descrga el "Listado de Expositores"
+                            button.button.expositores__plano__listado-button ver listado de expositores
+            .expositores__plano__valores
+                .container
+                    .row
+                        .col-24
+                            h3.expositores__plano__valores-title valores expositores
+                    .row
+                        .col-24.col-sm-12
+                            p.expositores__plano__valores-text valores y tipos de stands expositores
+                            ul.expositores__plano__list
+                                li.expositores__plano__list-item Stands (A) 6 mts2: 7 UF + IVA
+                                li.expositores__plano__list-item Stands (B) 20 mts2: 9 UF + IVA
+                                li.expositores__plano__list-item Stands (C) 35 mts2: 8 UF + IVA
+                                li.expositores__plano__list-item Stands (D) 28 mts2: 9 UF + IVA
+                                li.expositores__plano__list-item Stands (E) 14 mts2: 7 UF + IVA
+                                li.expositores__plano__list-item Stands (F) 56 mts2: 7 UF + IVA
+                                li.expositores__plano__list-item Stands (G) 28 mts2: 7 UF + IVA
+                        .col-24.col-sm-12
+                            p.expositores__plano__valores-text beneficios expositor
+                            ul.expositores__plano__list
+                                li.expositores__plano__list-item Credenciales
+                                li.expositores__plano__list-item Modulacion / Mobiliarios (según tipo de stand)
+                                li.expositores__plano__list-item Gráficas
+                                li.expositores__plano__list-item Servicios al Stand
+                                li.expositores__plano__list-item Servicio de Cafetería
+                                li.expositores__plano__list-item Energía (4 ampere o según requerimiento previo)
+                                li.expositores__plano__list-item Internet (Sujeto a factibilidad)
+                                li.expositores__plano__list-item Agua y desagüe (Sector gastronómico y según requerimiento previo)
+                                li.expositores__plano__list-item Servicio de banquetería (previa solicitud)
+                            
+            .expositores__plano__stands
+                .container
+                    .row
+                        .col-24.col-sm-8
+                            .expositores__plano__stands-image
+                                img(src="/images/expositores-stand-1.png")
+                        .col-24.col-sm-8
+                            .expositores__plano__stands-image
+                                img(src="/images/expositores-stand-2.png")
+                        .col-24.col-sm-8
+                            .expositores__plano__stands-image
+                                img(src="/images/expositores-stand-3.png")
