@@ -1,0 +1,28 @@
+mixin fifty-fifty(data, image, mode)
+    section.fifty-fifty.gray-bg(class="#{mode == 'imageLeft' ? 'fifty-fifty--img-left' : ''}")
+        .container-fluid
+            .row
+                if mode == 'imageLeft'
+                    .col-24.col-sm-14
+                        .fifty-fifty__image
+                            img(src=image)
+                    .col-24.col-sm-10
+                        .fifty-fifty__data
+                            h3.fifty-fifty__title.section-title.section-title--left= data.title
+                            h3.fifty-fifty__subtitle= data.subtitle
+                            a.button(href="#")
+                                i.fa.fa-download
+                                |#{data.button}
+                    
+
+                else
+                    .col-24.col-sm-10
+                        .fifty-fifty__data
+                            h3.fifty-fifty__title.section-title.section-title--left= data.title
+                            p.fifty-fifty__subtitle= data.subtitle
+                            a.button(href="#")
+                                i.fa.fa-download
+                                |#{data.button}
+                    .col-24.col-sm-14
+                        .fifty-fifty__image
+                            img(src=image)
