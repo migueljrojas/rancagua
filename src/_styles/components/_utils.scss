@@ -101,13 +101,23 @@
     }
 
     &:before {
-        top: -2%;
+        top: 0;
+        transform: translateY(-85%);
         background: url('/images/ripped-border-top.png') no-repeat center top / cover;
+
+        @include mq(md) {
+            transform: translateY(-40%);
+        }
     }
 
     &:after {
-        bottom: -2%;
+        bottom: 0;
+        transform: translateY(85%);
         background: url('/images/ripped-border-bottom.png') no-repeat center bottom / cover;
+
+        @include mq(md) {
+            transform: translateY(40%);
+        }
     }
 
     &--gray {

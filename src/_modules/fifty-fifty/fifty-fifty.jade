@@ -3,10 +3,10 @@ mixin fifty-fifty(data, image, mode)
         .container-fluid
             .row.nopadding
                 if mode == 'imageLeft'
-                    .col-24.col-sm-14
+                    .col-24.col-sm-13
                         .fifty-fifty__image
                             img(src=image)
-                    .col-24.col-sm-10
+                    .col-24.col-sm-11
                         .fifty-fifty__data
                             h3.fifty-fifty__title.section-title.section-title--left!= data.title
                             h3.fifty-fifty__subtitle!= data.subtitle
@@ -17,7 +17,7 @@ mixin fifty-fifty(data, image, mode)
                     
 
                 else
-                    .col-24.col-sm-10
+                    .col-24.col-sm-11
                         .fifty-fifty__data
                             h3.fifty-fifty__title.section-title.section-title--left!= data.title
                             p.fifty-fifty__subtitle!= data.subtitle
@@ -25,6 +25,6 @@ mixin fifty-fifty(data, image, mode)
                                 a.button(href="#")
                                     i.fa.fa-download
                                     |#{data.button}
-                    .col-24.col-sm-14
+                    .col-24.col-sm-13
                         .fifty-fifty__image
                             img(src=image)

@@ -106,4 +106,15 @@
             }
         }
     }
+
+    .fifty-fifty {
+        &__data {
+            margin-bottom: 40px;
+
+            @include mq(sm) {
+                margin-bottom: 0;
+                width: 66%;
+            }
+        }
+    }
 }

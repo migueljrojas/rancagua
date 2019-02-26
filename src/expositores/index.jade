@@ -1,6 +1,7 @@
 extends ../_layouts/base
 
 include ../_modules/hero/hero
+include ../_modules/fifty-fifty/fifty-fifty
 
 block config
   //- Correct base url pathing for this page
@@ -99,3 +100,5 @@ block content
                         .col-24.col-sm-8
                             .expositores__plano__stands-image
                                 img(src="/images/expositores-stand-3.png")
+
+        +fifty-fifty({'title':'Manual del expositor', 'subtitle':'Descarga las bases y condiciones de nuestra feria', 'button':'descarga manual'}, '/images/expositores-manual.png', 'imageLeft')
