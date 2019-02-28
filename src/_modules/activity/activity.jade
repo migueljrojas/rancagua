@@ -1,0 +1,10 @@
+mixin activity(activity, mode)
+    .activity
+        .activity__image
+            a(href="#")
+                img(src=activity.img)
+        .activity__data
+            a(href="#")
+                h3.activity__title=activity.title
+            span.activity__hour=activity.hour
+            p.activity__location=activity.location

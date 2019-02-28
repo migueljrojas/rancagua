@@ -1,0 +1,23 @@
+[
+    {
+        "date":"jueves 2",
+        "img":"/images/act-1.jpg",
+        "title":"speaker: futuro",
+        "hour":"13:00 hrs",
+        "location":"Escenario: Cardenal Caro"
+    },
+    {
+        "date":"viernes 3",
+        "img":"/images/act-2.jpg",
+        "title":"speaker: transformación digital",
+        "hour":"11:00 - 11:45 hrs",
+        "location":"Escenario: Cardenal Caro"
+    },
+    {
+        "date":"sabado 4",
+        "img":"/images/act-3.jpg",
+        "title":"speaker: economía",
+        "hour":"11:00 - 11:45 hrs",
+        "location":"Escenario: Cardenal Caro"
+    }
+]

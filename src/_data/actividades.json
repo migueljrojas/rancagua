@@ -1,0 +1,15 @@
+[
+    {
+        "date":"viernes 3",
+        "img":"/images/act-1.jpg",
+        "title":"panel ciudades",
+        "hour":"10:00 hrs",
+        "location":"Escenario: Cardenal Caro"
+    },
+    {
+        "img":"/images/act-2.jpg",
+        "title":"panel ciudades",
+        "hour":"10:00 hrs",
+        "location":"Escenario: Cardenal Caro"
+    }
+]

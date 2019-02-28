@@ -1,7 +1,7 @@
 extends ../_layouts/base
 
 include ../_modules/hero/hero
-include ../_modules/article/article
+include ../_modules/activity/activity
 
 block config
   //- Correct base url pathing for this page
@@ -10,10 +10,85 @@ block config
 block content
     main.actividades
         +hero('Actividades')
-        section.actividades__body.ripped-border.ripped-border--gray.ripped-border--top
+        section.actividades__paneles.ripped-border.ripped-border--gray.ripped-border--top
             .actividades__wrapper.gray-bg
                 .container
                     .row
-                        each article in site.data.activities
-                            .col-24.col-sm-12.col-md-8
-                                +article(article)
+                        .col-24
+                            h2.actividades__section-title paneles conversatorios
+                        .col-24.col-sm-12
+                            .row
+                                .col-24
+                                    h3.actividades__date viernes 3
+                            .row
+                                each activity in site.data.actividades
+                                    .col-24.col-sm-12
+                                        +activity(activity)
+                        .col-24.col-sm-12
+                            .row
+                                .col-24
+                                    h3.actividades__date sabado 4
+                            .row
+                                each activity in site.data.actividades
+                                    .col-24.col-sm-12
+                                        +activity(activity)
+
+        section.actividades__charlas
+            .actividades__wrapper.gray-bg
+                .container
+                    .row
+                        .col-24
+                            h2.actividades__section-title charlas/speakers
+                        each activity in site.data.charlas
+                            .col-24.col-sm-6
+                                .row
+                                    .col-24
+                                        h3.actividades__date=activity.date
+                                    .col-24
+                                        +activity(activity)
+
+        section.actividades__rueda-negocios
+            .actividades__wrapper.gray-bg
+                .container
+                    .row
+                        .col-24
+                            h2.actividades__section-title rueda de negocios
+                        .col-24
+                            p.actividades__text 4 integrantes + 1 mediador (por informar)
+
+        section.actividades__interactivas
+            .actividades__wrapper.gray-bg
+                .container
+                    .row
+                        .col-24
+                            h2.actividades__section-title actividades interactivas
+                            ul.actividades__list
+                                li.actividades__item 
+                                    span 1
+                                    |Mini circuito Parque Safari
+                                li.actividades__item 
+                                    span 2
+                                    |Juego interactivo GAUDÍ
+                                li.actividades__item 
+                                    span 3
+                                    |Muestra Museo Interactivo Mirador (MIN) 
+                                li.actividades__item 
+                                    span 4
+                                    |Muestras Gastronómicas
+                                    ul.actividades__sublist
+                                        li.actividades__subitem Comida Saludable
+                                        li.actividades__subitem Hábitos alimenticios
+                                        li.actividades__subitem Cerveza
+                                        li.actividades__subitem Vinos y Quesos
+                                li.actividades__item 
+                                    span 5
+                                    |Show musical cierre (viernes y sábado)
+                                
+        section.actividades__concurso
+            .actividades__wrapper.gray-bg
+                .container
+                    .row
+                        .col-24
+                            h2.actividades__section-title concurso de innovación escolar
+                        .col-24
+                            p.actividades__text en desarrollo

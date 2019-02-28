@@ -11,7 +11,7 @@ footer.footer
                         ul.footer__social
                             each item in site.data.social
                                 li
-                                    a(href=item.url)
+                                    a(href=item.url target="_blank")
                                         i.fa(class="fa-#{item.name}")
 
                         a.button.footer__cta(href="/registro") Registrarme
