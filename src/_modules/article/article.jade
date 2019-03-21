@@ -1,12 +1,12 @@
 mixin article(article, mode)
     .article
         .article__image
-            a(href="#")
+            a(href="/noticias-interna")
                 img(src=article.img)
         .article__data
-            a(href="#")
+            a(href="/noticias-interna")
                 h3.article__title= article.title
             p.article__text= article.summary
 
             if mode != 'noButton'
-                a.button(href="#") Leer más
+                a.button(href="/noticias-interna") Leer más
